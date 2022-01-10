@@ -5,12 +5,11 @@
 ## What good for
 
 - 기존 사이드카 모델이 가진 한계점 보완
-  - 사이드카 모델의 경우, 무조건 사이드카로 붙은 프록시를 통해 접근해야 하기 때문에 overhead가 발생할 수 밖에 없음
-    - 기존 flow: app1 -> sideCarProxy -> sideCarProxy -> app2
-      - Inbound packet -> get host TCP/IP -> sideCarProxy -> application
-      
-    - when using cilium: App1 -> sideCarPorxy -> App2
-      - inbound packet -> cilium -> app
+  * 사이드카 모델의 경우, 무조건 사이드카로 붙은 프록시를 통해 접근해야 하기 때문에 overhead가 발생할 수 밖에 없음
+  - 기존: app1 -> sideCarProxy -> sideCarProxy -> app2
+    -  Inbound packet -> get host TCP/IP -> sideCarProxy -> application
+  - cilum: App1 -> sideCarPorxy -> App2
+    - inbound packet -> cilium -> app
       
         
 
